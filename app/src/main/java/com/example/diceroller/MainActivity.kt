@@ -25,6 +25,8 @@ import androidx.compose.ui.draw.clip
 
 // Main activity to set up the application
 //test
+
+//test2
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
