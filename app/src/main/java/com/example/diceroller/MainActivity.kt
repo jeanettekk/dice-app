@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.diceroller.ui.theme.DiceRollerTheme
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.style.TextOverflow
 
 // Main activity to set up the application
 //test
@@ -129,8 +130,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
                 .width(200.dp)
                 .height(70.dp),
             colors = androidx.compose.material3.ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF673AB7),
-                contentColor = Color.Black
+                containerColor = Color(0xFF673AB7)
             )
         ) {
             // Button text changes based on game state
@@ -216,19 +216,21 @@ fun AvatarWithSpeechBubble(
         Box(
             modifier = Modifier
                 .align(Alignment.TopStart)
-                .offset(x = 100.dp, y = (-30).dp)
-                .padding(horizontal = 8.dp, vertical = 4.dp)
+                .offset(x = 80.dp, y = (-60).dp)
+                .padding(horizontal = 14.dp, vertical = 7.dp)
                 .border(2.dp, Color.Black, shape = CircleShape)
                 .clip(CircleShape)
                 .background(Color.White)
-                .padding(8.dp)
+                .padding(14.dp)
                 .widthIn(max = 270.dp)
         ) {
             Text(
                 text = message,
                 color = Color.Black,
                 fontSize = 16.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis
             )
         }
     }
